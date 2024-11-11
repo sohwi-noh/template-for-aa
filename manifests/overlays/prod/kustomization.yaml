@@ -14,5 +14,3 @@ namePrefix: prod-
 images:
 - name: ceappacr.azurecr.io/82107454
   newTag: "202411110638"
-- name: cepgstapacr.azurecr.io/82107454
-  newTag: "202411110615"
