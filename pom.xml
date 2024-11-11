@@ -29,6 +29,21 @@
 	<properties>
 		<java.version>17</java.version>
 	</properties>
+	<repositories>
+		<!--		lib import용 repo -->
+		<repository>
+			<id>github</id>
+			<url>https://maven.pkg.github.com/sohwi-noh/template-for-aa</url>
+		</repository>
+	</repositories>
+	<distributionManagement>
+		<!--		package publish용 repo -->
+		<repository>
+			<id>github</id>
+			<name>GitHub axccoe Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/sohwi-noh/template-for-aa</url>
+		</repository>
+	</distributionManagement>
 
 	<dependencies>
 	    <dependency>
