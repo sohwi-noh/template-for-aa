@@ -48,7 +48,6 @@ jobs:
 
     - name: 'Build & Tag Image'
       run: |
-#            docker build -t ${{ secrets.BASEACR_LOGIN_SERVER }}/${{ env.IMAGE_NAME }}:${{ steps.gen-version.outputs.VERSION }} -f Dockerfile-maven .
             docker tag cepgbaseacr.azurecr.io/troubleshooting:latest ${{ secrets.STAPACR_LOGIN_SERVER }}/troubleshooting:82107454
 
     - name: 'Push image'
