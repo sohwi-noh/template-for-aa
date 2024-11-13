@@ -48,8 +48,7 @@ jobs:
 
     - name: 'Build & Tag Image'
       run: |
-            docker build -t ${{ secrets.BASEACR_LOGIN_SERVER }}/${{ env.IMAGE_NAME }}:${{ steps.gen-version.outputs.VERSION }} -f Dockerfile-maven .
-            docker tag ${{ secrets.BASEACR_LOGIN_SERVER }}/${{ env.IMAGE_NAME }}:${{ steps.gen-version.outputs.VERSION }} ${{ secrets.STAPACR_LOGIN_SERVER }}/${{ env.IMAGE_NAME }}:${{ steps.gen-version.outputs.VERSION }}
+            docker pull cepgbaseacr.azurecr.io/troubleshooting:latest
 
     - name: 'Push image'
       uses: azure/docker-login@v1
@@ -59,7 +58,7 @@ jobs:
         password: ${{ secrets.PRD_REGISTRY_PASSWORD }}
     
     - run: |
-          docker push ${{ secrets.STAPACR_LOGIN_SERVER }}/${{ env.IMAGE_NAME }}:${{ steps.gen-version.outputs.VERSION }}
+          docker push cepgbaseacr.azurecr.io/troubleshooting:latest
 
     - name: Update Kubernetes resources
       run: |
