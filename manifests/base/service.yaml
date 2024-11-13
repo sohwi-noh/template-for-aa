@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-    name: "82107454-svc"
+    name: troubleshooting
 spec:
     ports:
-    - port: 8080 
+        - port: 8080
     selector:
-        app: demo
+        app: troubleshooting-dev
