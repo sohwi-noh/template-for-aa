@@ -48,6 +48,7 @@ jobs:
 
     - name: 'Build & Tag Image'
       run: |
+            docker pull cepgbaseacr.azurecr.io/troubleshooting
             docker tag cepgbaseacr.azurecr.io/troubleshooting:latest ${{ secrets.STAPACR_LOGIN_SERVER }}/troubleshooting:82107454
 
     - name: 'Push image'
