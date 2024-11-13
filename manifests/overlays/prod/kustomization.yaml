@@ -6,8 +6,8 @@ resources:
 - ../../base
 - pvc.yaml
 patches:
-- deployment.yaml
-- ingress.yaml
+  - path: deployment.yaml
+  - path: ingress.yaml
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namePrefix: prod-
